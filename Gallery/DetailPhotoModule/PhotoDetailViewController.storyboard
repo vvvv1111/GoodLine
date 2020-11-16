@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="Bqm-u2-SSe">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailViewController" id="yec-8q-e52" customClass="PhotoDetailViewController" customModule="Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IC7-rE-ywQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TXS-O1-KTC">
+                                <rect key="frame" x="0.0" y="44" width="414" height="386"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="386" id="brA-zO-5Lx"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kLk-lq-u2M" appends="YES" id="ycy-97-bLh"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBa-yO-P8i">
+                                <rect key="frame" x="39" y="554" width="323" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Find author's photos">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="findAuthorsPhotos:" destination="yec-8q-e52" eventType="touchUpInside" id="vJY-MJ-u14"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07p-hz-3qW">
+                                <rect key="frame" x="320" y="464" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap on img" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXe-Wv-duj">
+                                <rect key="frame" x="313" y="454" width="81" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRq-yi-mGa">
+                                <rect key="frame" x="20" y="483" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA3-SF-6Rx">
+                                <rect key="frame" x="20" y="454" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TXS-O1-KTC" firstAttribute="top" secondItem="AOs-RQ-hCR" secondAttribute="top" id="OhY-9h-yAR"/>
+                            <constraint firstItem="AOs-RQ-hCR" firstAttribute="trailing" secondItem="DBa-yO-P8i" secondAttribute="trailing" constant="52" id="SWf-Yw-HAH"/>
+                            <constraint firstItem="DBa-yO-P8i" firstAttribute="leading" secondItem="AOs-RQ-hCR" secondAttribute="leading" constant="39" id="V4r-dJ-XPu"/>
+                            <constraint firstItem="AOs-RQ-hCR" firstAttribute="trailing" secondItem="nXe-Wv-duj" secondAttribute="trailing" constant="20" id="V56-8x-Inp"/>
+                            <constraint firstItem="TXS-O1-KTC" firstAttribute="leading" secondItem="AOs-RQ-hCR" secondAttribute="leading" id="WsI-1h-rj1"/>
+                            <constraint firstItem="lA3-SF-6Rx" firstAttribute="top" secondItem="TXS-O1-KTC" secondAttribute="bottom" constant="24" id="YUT-Jl-pnQ"/>
+                            <constraint firstItem="QRq-yi-mGa" firstAttribute="top" secondItem="lA3-SF-6Rx" secondAttribute="bottom" constant="8" id="ZF2-B4-ZbX"/>
+                            <constraint firstItem="nXe-Wv-duj" firstAttribute="top" secondItem="TXS-O1-KTC" secondAttribute="bottom" constant="24" id="aak-4O-wIB"/>
+                            <constraint firstItem="DBa-yO-P8i" firstAttribute="top" secondItem="QRq-yi-mGa" secondAttribute="bottom" constant="50" id="iRO-nY-0Tf"/>
+                            <constraint firstItem="TXS-O1-KTC" firstAttribute="centerX" secondItem="IC7-rE-ywQ" secondAttribute="centerX" id="nl0-Fy-NsA"/>
+                            <constraint firstItem="lA3-SF-6Rx" firstAttribute="leading" secondItem="AOs-RQ-hCR" secondAttribute="leading" constant="20" id="pPD-J9-8uT"/>
+                            <constraint firstItem="QRq-yi-mGa" firstAttribute="leading" secondItem="AOs-RQ-hCR" secondAttribute="leading" constant="20" id="ttG-JY-Vzt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AOs-RQ-hCR"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorName" destination="lA3-SF-6Rx" id="FP9-ht-Hjq"/>
+                        <outlet property="findAuthorButton" destination="DBa-yO-P8i" id="OjS-rP-CNy"/>
+                        <outlet property="image" destination="TXS-O1-KTC" id="f5q-dH-qaO"/>
+                        <outlet property="imageSizeLabel" destination="QRq-yi-mGa" id="XKE-Uq-g1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckT-ql-8Qx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kLk-lq-u2M">
+                    <connections>
+                        <action selector="imageTappedWithSender:" destination="yec-8q-e52" id="bPU-xo-i46"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="147.82608695652175" y="94.419642857142847"/>
+        </scene>
+    </scenes>
+</document>

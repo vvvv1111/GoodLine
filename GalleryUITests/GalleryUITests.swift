@@ -27,9 +27,15 @@ class GalleryUITests: XCTestCase {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
+        app.alerts.buttons["хорошо"].tap()
+        app.navigationBars.buttons["Search"].tap()
+        app.textFields["Type author's name (nas for example)"].tap()
+        app.textFields["Type author's name (nas for example)"].typeText("nas")
+        
+        XCTAssert(app.cells.firstMatch.exists)
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
     }
 
     func testLaunchPerformance() throws {
@@ -41,3 +47,4 @@ class GalleryUITests: XCTestCase {
         }
     }
 }
+
